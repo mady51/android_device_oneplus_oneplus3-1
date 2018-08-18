@@ -271,6 +271,7 @@ PRODUCT_PACKAGES += \
     libcamera_parameters_shim
 
 PRODUCT_PACKAGES += \
+    GoogleCamera \
     Oneplus3Parts
 
 # Doze mode
