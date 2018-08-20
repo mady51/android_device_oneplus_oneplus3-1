@@ -61,9 +61,11 @@ ro.gps.agps_provider=1
 # Graphics
 debug.gralloc.enable_fb_ubwc=1
 ro.opengles.version=196610
+debug.sf.recomputecrop=0
 ro.sf.lcd_density=420
 sdm.perf_hint_window=50
 persist.hwc.enable_vds=1
+debug.sf.enable_hwc_vds=1
 
 # IMS
 persist.data.iwlan.enable=true
@@ -148,3 +150,5 @@ ro.sys.sdcardfs=true
 #enable camera read sensors data
 persist.camera.gyro.disable=0
 
+# touch optimization
+persist.vendor.qti.inputopts.enable=true
