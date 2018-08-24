@@ -143,7 +143,7 @@ on charger
 on property:sys.boot_completed=1
     trigger enable-low-power
     setprop sys.io.scheduler cfq
-    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/read_ahead_kb 1024
 
 on property:init.svc.recovery=running
     trigger enable-low-power
