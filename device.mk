@@ -272,6 +272,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     GoogleCamera \
+    OnePlusCamera \
+    OnePlusCameraService \
     Oneplus3Parts
 
 # Doze mode
