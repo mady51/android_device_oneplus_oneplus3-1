@@ -410,3 +410,10 @@ case "$buildvariant" in
         echo "4 4 1 4" > /proc/sys/kernel/printk
         ;;
 esac
+
+# Hack to get IMS up and running on GSI
+
+if [ -f /data/system/users/0/settings_global.xml ]; then
+    sed -i 's/"multi_sim_data_call" value="1"/"multi_sim_data_call" value="-1"/g' /data/system/users/0/settings_global.xml
+    restorecon /data/system/users/0/settings_global.xml
+fi
