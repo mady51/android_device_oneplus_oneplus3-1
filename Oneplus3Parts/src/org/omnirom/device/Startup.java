@@ -33,6 +33,8 @@ public class Startup extends BroadcastReceiver {
         }
         if (enabled) {
             Utils.writeValue(file, "1");
+        } else {
+            Utils.writeValue(file, "0");
         }
     }
 
@@ -95,6 +97,9 @@ public class Startup extends BroadcastReceiver {
 
         enabled = sharedPrefs.getBoolean(GestureSettings.KEY_TAPTOWAKE_SWITCH, false);
         restore(TapToWakeSwitch.getFile(), enabled);
+
+        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_SWAPKEYS_SWITCH, true);
+        restore(SwapHwKeysSwitch.getFile(), enabled);
 
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_HBM_SWITCH, false);
         if (enabled) {
